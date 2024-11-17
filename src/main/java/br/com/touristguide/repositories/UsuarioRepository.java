@@ -12,10 +12,10 @@ import br.com.touristguide.entities.Usuario;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, UUID> {
 
-	@Query("FROM Usuario u WHERE u.email:=email")
+	@Query("FROM Usuario u WHERE u.email = :email")
 	Usuario findByEmail(@Param("email") String email);
 
-	@Query("FROM Usuario u WHERE u.email:=email AND u.senha:=senha")
+	@Query("FROM Usuario u WHERE u.email = :email AND u.senha = :senha")
 	Usuario findByEmailAndPassword(@Param("email") String email,
 			@Param("senha") String senha);
 }

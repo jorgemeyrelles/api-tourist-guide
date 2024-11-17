@@ -12,6 +12,6 @@ import br.com.touristguide.entities.Perfil;
 @Repository
 public interface PerfilRepository extends JpaRepository<Perfil, UUID> {
 
-	@Query("FROM Perfil p WHERE p.nome:=nome")
+	@Query("FROM Perfil p WHERE p.nome = :nome")
 	Perfil findByNome(@Param("nome") String nome);
 }

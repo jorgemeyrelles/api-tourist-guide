@@ -5,10 +5,8 @@ import java.util.UUID;
 import lombok.Data;
 
 @Data
-public class CriarUsuarioResponseDto {
+public class PermissaoCriarUsuarioResponse {
 
 	private UUID id;
 	private String nome;
-	private String email;
-	private PerfilCriarUsuarioResponse perfil;
 }

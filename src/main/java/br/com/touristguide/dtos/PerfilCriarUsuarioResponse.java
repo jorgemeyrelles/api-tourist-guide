@@ -1,14 +1,13 @@
 package br.com.touristguide.dtos;
 
+import java.util.List;
 import java.util.UUID;
-
 import lombok.Data;
 
 @Data
-public class CriarUsuarioResponseDto {
+public class PerfilCriarUsuarioResponse {
 
 	private UUID id;
 	private String nome;
-	private String email;
-	private PerfilCriarUsuarioResponse perfil;
+	private List<PermissaoCriarUsuarioResponse> permissoes;
 }
